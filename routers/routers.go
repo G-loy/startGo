@@ -12,7 +12,7 @@ func Include(opts ...Option) {
 }
 
 func Init() *gin.Engine {
-	r := gin.New()
+	r := gin.Default()
 	for _, opt := range options {
 		opt(r)
 	}
